@@ -1897,6 +1897,7 @@ var levelButtonClicked = -1;
 var showingNewGame2 = false;
 
 var musicSound = new Audio('data/music hq.wav');
+var bubblePopSound = new Audio('sounds/pop.wav');
 // musicSound.addEventListener('canplaythrough', event => {incrementCounter();});
 
 
@@ -2928,6 +2929,7 @@ function drawCharacters() {
 				ctx.save();
 				var burstImg = svgBurst[char[_loc1_].burstFrame];
 				var burstmat = charModels[char[_loc1_].id].burstmat;
+				bubblePopSound.play();
 				ctx.transform(burstmat.a,burstmat.b,burstmat.c,burstmat.d,burstmat.tx+char[_loc1_].x,burstmat.ty+char[_loc1_].y);
 				ctx.drawImage(burstImg, -burstImg.width/2, -burstImg.height/2);
 				ctx.restore();
