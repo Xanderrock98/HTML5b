@@ -4033,7 +4033,6 @@ function startDeath(i) {
 		char[i].pcharState = char[i].charState;
 		checkButton2(i,true);
 		fallOff(i);
-		bubblePopSound.play();
 		char[i].deathTimer = 20;
 		char[i].leg1frame = 1;
 		char[i].leg2frame = 1;
